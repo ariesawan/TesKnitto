@@ -42,7 +42,10 @@ const Pagination = () => {
     const endIndex = startIndex + 9;
     return data.slice(startIndex, endIndex + 1).map((item) => (
       <li key={item.id} className="py-2">
-        {item.title}
+        <span className="mr-2 ml-2">{item.userID}</span>
+        <span className="mr-2 ml-2">{item.id}</span>
+        <span className="mr-2 ml-2">{item.title}</span>
+        <span className="mr-2 ml-2">{item.completed}</span>
       </li>
     ));
   };
